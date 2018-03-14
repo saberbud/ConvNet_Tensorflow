@@ -114,6 +114,8 @@ class xy_data(object):
     def out_test_bad(self, ns, ne):
         return self._test_bad[ns:ne], self._Y_test_bad[ns:ne]
 
+    def out_test(self):
+        return np.concatenate((self._test_good,self._test_bad),axis=0), np.concatenate((self._Y_test_good,self._Y_test_bad),axis=0)
 
     def make_batch(self,mini_batch_size=128):
         if self._seed > 0: np.random.seed(self._seed)
