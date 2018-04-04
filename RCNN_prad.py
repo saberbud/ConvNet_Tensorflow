@@ -176,14 +176,6 @@ with tf.variable_scope("model"):
 #print("Global variables:")
 #print(tf.global_variables())
 
-'''
-print("Calculate test accuracy in function:")
-#with tf.variable_scope("model", reuse=True):  use when training is also run
-with tf.variable_scope("model"):
-    parameters = initialize_parameters()
-    test_acc=Test_accuracy(parameters)
-    print("test accuracy= " + str(test_acc))
-'''
 
 
 
